@@ -1,0 +1,42 @@
+{
+  "enablePrediction": {
+    "desc:": "Enables predictive chunkloading. default:true",
+    "enablePrediction": true
+  },
+  "predictionLoadingSpeed": {
+    "desc:": "Modifier to prediction area loading speed. range: [0.01 -> 10.0], default: 1.0",
+    "predictionLoadingSpeed": 1.5
+  },
+  "predictionarea": {
+    "desc:": "Size of the area marked for preloading: default:7 chunks, max: 32, min: 2",
+    "predictionarea": 9
+  },
+  "enableSmartChunkLoading": {
+    "desc:": "Enables smart chunkloading around the player. default:true",
+    "enableSmartChunkLoading": true
+  },
+  "smartChunkLoadingSpeed": {
+    "desc:": "Modifier to smart chunkloading speed. range: [0.01 -> 10.0], default: 1.0",
+    "smartChunkLoadingSpeed": 1.5
+  },
+  "preventWalkUnloaded": {
+    "desc:": "Prevents players from moving into unloaded areas. default:true",
+    "preventWalkUnloaded": true
+  },
+  "enableSmartPostProcessing": {
+    "desc:": "Enables smart post processing. default:true",
+    "enableSmartPostProcessing": true
+  },
+  "enableFasterChunkTasks": {
+    "desc:": "Enables faster worldgen tasks. default:false",
+    "enableFasterChunkTasks": true
+  },
+  "optimizeWaiting": {
+    "desc:": "Optimizes time the world is stalled while waiting for a chunk. default:true",
+    "optimizeWaiting": true
+  },
+  "debugLogging": {
+    "desc:": "Enables debug logging. default:false",
+    "debugLogging": false
+  }
+}

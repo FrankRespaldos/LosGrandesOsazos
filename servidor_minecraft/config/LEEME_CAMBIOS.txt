@@ -1,0 +1,162 @@
+# CONFIGS OPTIMIZADAS — Artxhyriux
+# Minecraft 1.20.1 · Fabric · i5-10300H · GTX 1050 + Intel UHD
+# Prioridad: Estabilidad + Exploración activa
+# ============================================================
+
+INSTRUCCIONES
+─────────────
+1. Copia todos estos archivos a tu carpeta .minecraft/config/
+2. Reemplaza los existentes cuando te lo pida Windows
+3. NO copies el README (este archivo)
+4. Inicia Minecraft y usa /spark profiler para validar mejoras
+
+ARCHIVOS MODIFICADOS Y POR QUÉ
+───────────────────────────────
+
+[ embeddium-options.json ] ⚠ CRÍTICO
+  - use_advanced_staging_buffers: true → FALSE
+    ESTO CAUSABA EL CRASH. Con tu combo Intel UHD + GTX 1050 el buffer
+    mapeado se liberaba antes de terminar de usarlo.
+  - cpu_render_ahead_limit: 3 → 1
+    Con dual-GPU, renderizar 3 frames adelante causaba desincronización.
+  - use_entity_culling: true → FALSE
+    EntityCulling ya hace esto con más precisión (raytracing vs método
+    simple). Tenerlo en ambos es doble procesamiento innecesario.
+
+[ flywheel.json ] ⚠ IMPORTANTE
+  - backend: "DEFAULT" → "instancing"
+    Con Intel UHD + GTX 1050, DEFAULT puede elegir el backend "indirect"
+    que es menos estable en sistemas dual-GPU. Instancing es más seguro.
+
+[ dynamicview.json ]
+  - minChunkViewDist: 10 → 6
+    Con min=max=10 el mod no podía hacer nada. Ahora puede reducir a 6
+    cuando el TPS cae y subir hasta 12 al explorar con TPS estable.
+  - maxChunkViewDist: 10 → 12
+    Un poco más de visión al explorar cuando el sistema lo permite.
+  - meanAvgTickTime: 45 → 42ms
+    Reacciona un poco antes de que el TPS baje, más estable.
+  - viewDistanceUpdateRate: 60 → 20s
+    Ajuste más frecuente = respuesta más rápida al cambio de TPS.
+
+[ performant-common.json ] ⚠ IMPORTANTE PARA CREATE
+  - enableDynamicEntityRendering: true → FALSE
+    EntityCulling ya maneja esto con mayor precisión.
+  - enableDynamicEntityUpdates: true → FALSE
+    DoesPotatoTick ya controla el tick por distancia con más granularidad
+    (tiene whitelists por mob y por modID de Create).
+  - multiEntities: true → FALSE
+    El multithreading de entidades puede conflictar con las contraptions
+    de Create, causando crashes o comportamiento errático.
+  - disableNotifyOnBlockChange: true → FALSE
+    Conflicto conocido con Create: las contraptions podían no actualizar
+    bloques correctamente al activarse.
+  - logEntityAILag: true → false
+    Reduce spam en los logs en producción.
+  - meanTickAITH: 55 → 50ms
+    Activa el balanceo de IA un poco antes, más estable.
+
+[ immersive_optimization.json ]
+  - enableViewportCulling: true → FALSE
+    EntityCulling ya hace viewport culling con raytracing. Triple culling
+    (BFRC + EntityCulling + ImmersiveOpt) es redundante y costoso.
+  - enableTrackingCulling: true → FALSE
+    Misma razón. DoesPotatoTick también controla el tracking de entidades.
+  - enableDistanceCulling: true (MANTENIDO)
+    Este sí es único de ImmersiveOpt y complementa sin duplicar.
+
+[ brute_force_rendering_culling.json ]
+  - Cull Entity: true → FALSE
+    EntityCulling lo hace con raytracing, mucho más preciso.
+  - Cull Chunk: true → FALSE
+    Embeddium ya gestiona el chunk culling internamente.
+  - Cull Block Entity: true (MANTENIDO)
+    Capa adicional útil para block entities que no estén en la whitelist
+    de EntityCulling.
+
+[ chunksending.json ]
+  - maxChunksPerTick: 5 → 12
+    Con BetterChunkLoading activo y exploración activa, 5 era un cuello
+    de botella. 12 permite que BetterChunkLoading trabaje correctamente.
+
+[ betterchunkloading.json ]
+  - predictionLoadingSpeed: 1.0 → 1.5
+    Carga predictiva más agresiva para exploración. Más chunks pre-cargados
+    en la dirección de movimiento.
+  - smartChunkLoadingSpeed: 1.0 → 1.5
+    Ídem para la carga inteligente alrededor del jugador.
+  - predictionarea: 7 → 9
+    Área de predicción más amplia. Útil explorando rápido con elytra o caballo.
+  - enableFasterChunkTasks: false → TRUE
+    Acelera las tareas de worldgen. Ligero aumento de CPU pero mucho menos
+    lag al entrar en zonas no generadas.
+
+[ fpsreducer.json ]
+  - reducingInBackground: true → FALSE
+    Dynamic FPS ya maneja la reducción en background. Tenerlo en ambos
+    causaba doble intervención sobre el FPS limitador.
+
+[ entityculling.json ]
+  - Limpiado: eliminadas entradas de mods no presentes en tu pack
+    (alexscaves, avm_staff, botania) del blockEntityWhitelist para
+    reducir procesamiento innecesario de whitelists vacíos.
+  - tickCullingWhitelist: mantenida completa con todas las entidades
+    de Create y botes que no deben ser afectados.
+
+[ smoothchunk.json ]
+  - chunkSaveDelay: 300 → 180s
+    Con exploración activa se generan muchos chunks nuevos. Guardar más
+    frecuente reduce pérdida de datos si el juego crashea.
+  - chunkUnloadLimit: 20 → 25
+    Permite descargar chunks un poco más rápido al explorar, liberando
+    memoria para los chunks nuevos que vas cargando.
+
+[ doespotatotick-common.toml ]
+  - Sin cambios. Config original excelente:
+    Create y witherstormmod excluidos del tick throttling ✓
+    Bosses en whitelist ✓
+    TickRaidersInRaid activo ✓
+
+[ immediatelyfast.json ]
+  - Sin cambios. Config original correcta.
+    experimental_screen_batching en false = seguro con Create ✓
+
+[ farsight.json ]
+  - Sin cambios. maxRenderDistance: 64 correcto para tu RAM. ✓
+
+[ dynamic_fps.json ]
+  - Sin cambios. Archivo vacío = defaults correctos. ✓
+
+MODS A ELIMINAR (borra el .jar de la carpeta mods/)
+────────────────────────────────────────────────────
+  ❌ BadOptimizations-2.4.1-1.20.1.jar
+     → 100% redundante con ModernFix + Embeddium
+
+  ❌ leaky-fabric-1.20.1-2.3.jar
+     → FerriteCore previene, spark diagnostica mejor
+
+  ❌ Debugify-1.20.1+2.0.jar (EVALÚA)
+     → ~60% de sus fixes ya los tiene ModernFix. Si lo eliminas y notas
+       algún bug específico, puedes añadirlo de vuelta.
+
+MODS SIN CAMBIOS (ya estaban bien configurados)
+────────────────────────────────────────────────
+  ✓ ferritecore_mixin.properties   — perfecto
+  ✓ modernfix-mixins.properties    — vacío = defaults óptimos
+  ✓ entityculling.json             — whitelists de Create correctas
+  ✓ connectivity.json              — necesario con Create
+  ✓ notenoughcrashes.json          — correcto
+  ✓ create-client.toml             — correcto
+  ✓ create-server.toml             — correcto
+  ✓ smsn.json                      — bien configurado
+  ✓ fastquit.toml                  — correcto
+  ✓ cull-less-leaves.json          — correcto
+  ✓ smoothchunk.json               — ajuste menor
+
+ORDEN DE PRIORIDAD SI ALGO FALLA
+─────────────────────────────────
+1. Si crashea al renderizar chunks → revisar embeddium-options.json
+2. Si Create tiene comportamiento raro → revisar flywheel.json (backend)
+3. Si las contraptions crashean → revisar performant-common.json (multiEntities)
+4. Si el juego va lento explorando → revisar dynamicview.json + chunksending.json
+5. Si entidades desaparecen → revisar brute_force_rendering_culling.json

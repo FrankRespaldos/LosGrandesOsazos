@@ -1,0 +1,79 @@
+{
+	// Settings for all dimensions and their scaling.
+	"dimensionSettings": {
+		// The starting mob level for any given dimension in this map.
+		"startingLevels": { },
+		// The maximum mob level for any given dimension in this map.
+		"maximumLevels": { }
+	},
+	// Settings for all biomes and their scaling.
+	"biomeScalingSettings": {
+		// The starting mob level for any given biome in this map.
+		"startingLevels": { },
+		// The maximum mob level for any given biome in this map.
+		"maximumLevels": { }
+	},
+	// Settings for all structures and their scaling.
+	"structureScalingSettings": {
+		// The global setting for all structures to have a given radius which affects the spawned mobs within that dimension area.
+		"radius": 50,
+		// The starting mob level for any given structure in this map.
+		"startingLevels": { },
+		// The maximum mob level for any given structure in this map.
+		"maximumLevels": { }
+	},
+	// Settings for all entities and their scaling.
+	"scalingLevelSettings": {
+		// The global maximum level for all entities.
+		"maximumLevel": 1000000,
+		// The global starting level for all entities.
+		"startingLevel": 0,
+		// Based on a given block radius from the given mob, the players within it alongside their level will be considered in the leveling average.
+		"levelScalingMaxRadiusByBlocks": 100,
+		// Based on (x) player level, the formula will be factored into the total averaging function.
+		"levelScalingByPlayerFormula": "x",
+		// How many levels to decrement in the average total.
+		"levelAverageDecrement": 3,
+		// How many levels to increment in the average total.
+		"levelAverageIncrement": 3,
+		// The starting levels for any given entities. Regex or identifiers (e.g, minecraft:skeleton) are supported.
+		"entityStartingLevels": { },
+		// The maximum levels for any given entities. Regex or identifiers (e.g, minecraft:skeleton) are supported.
+		"entityMaximumLevels": { },
+		// The percentage increase of experience per mob level. Default is 10%.
+		"entityExperiencePercentage": 0.1,
+		// The percentage increase of damage per mob level. Default is 10%.
+		"entityBaseDamagePercentage": 0.1,
+		// The percentage increase of armor per mob level. Default is 8%.
+		"entityBaseArmorPercentage": 0.08,
+		// The percentage increase of health per mob level. Default is 5%.
+		"entityBaseHealthPercentage": 0.08,
+		// What mob entities to blacklist from scaling.
+		"mobBlacklist": []
+	},
+	// Visual settings for the client.
+	"visualSettings": {
+		// Whether to enable mob nameplates.
+		"nameplateEnabled": true,
+		// Whether to show level.
+		"showNameplateLevel": true,
+		// Whether to show health-bar.
+		"showNameplateHealthBar": true,
+		// Whether to show health-text.
+		"showNameplateHealthText": true,
+		// The render distance of the nameplate. Higher values consume more resources.
+		"nameplateRenderDistance": 20,
+		// Presents hostile mobs only.
+		"nameplateShowHostileMobsOnly": false,
+		// The offset of the nameplate on the y-axis.
+		"nameplateOffsetY": 1.0,
+		// The scale of the nameplate.
+		"nameplateOffsetScale": 0.800000011920929,
+		// The color of the visible nameplate on mobs.
+		"nameplateColor": "#FF000000",
+		// The background color of the visible nameplate on mobs.
+		"nameplateBackgroundColor": "#FFFFFFFF",
+		// What mob entities to blacklist from having a nameplate.
+		"nameplateMobBlacklist": []
+	}
+}

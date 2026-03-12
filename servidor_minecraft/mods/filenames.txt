@@ -1,0 +1,54 @@
+ El volumen de la unidad C es Windows X-Lite
+ El n£mero de serie del volumen es: 3A0B-2888
+
+ Directorio de C:\Users\Admin\curseforge\minecraft\Instances\end update (§)\mods
+
+03/03/2026  21:58    <DIR>          .
+03/03/2026  21:58    <DIR>          ..
+26/02/2026  10:28         4.952.938 adventurez-1.4.20.jar
+27/02/2026  22:04         1.266.546 amendments-1.20-2.2.5-fabric.jar
+26/02/2026  08:48           609.150 balm-fabric-1.20.1-7.3.38.jar
+26/02/2026  09:22         2.312.835 bclib-3.0.14.jar
+26/02/2026  09:22        92.544.800 better-end-4.0.11.jar
+26/02/2026  10:29        22.981.698 better-nether-9.0.10.jar
+26/02/2026  09:23            82.187 betterendcitiesvanilla-1.20.1.jar
+26/02/2026  10:29         5.734.423 bewitchment-1.20-10.jar
+26/02/2026  10:12         9.019.150 Boss Music Mod 1.20.x v1.2.1.jar.disabled
+26/02/2026  08:01         1.172.214 cloth-config-11.1.136-fabric.jar
+26/02/2026  11:38        32.189.889 create-fabric-6.0.8.1+build.1744-mc1.20.1.jar
+26/02/2026  10:19         1.212.248 CreativeCore_FABRIC_v2.12.34_mc1.20.1.jar
+26/02/2026  09:29         1.451.306 creeperoverhaul-3.0.2-fabric.jar
+25/02/2026  20:07            25.668 cupboard-fabric-1.20.1-2.7.jar
+26/02/2026  09:42            42.788 dragonfight-fabric-1.20.1-4.7.jar
+26/02/2026  09:29        13.161.726 dungeons-and-taverns-3.0.3.f[Fabric].jar
+26/02/2026  09:25           352.129 end-reborn-1.20-v1.0.8.jar
+26/02/2026  09:29         1.194.281 endermanoverhaul-fabric-1.20.1-1.0.4.jar
+26/02/2026  10:19         4.728.243 EnhancedVisuals_FABRIC_v1.8.2_mc1.20.1.jar
+25/02/2026  19:37         2.107.977 fabric-api-0.92.7+1.20.1.jar
+26/02/2026  09:20           141.139 fabric-end-remastered-5.2.4.jar
+03/03/2026  21:58                 0 filenames.txt
+26/02/2026  09:30            26.181 forgivingworld-fabric-1.20.1-4.7.jar
+26/02/2026  09:44         3.615.166 friendsandfoes-fabric-mc1.20.1-3.0.9.jar
+26/02/2026  09:29         1.069.327 geckolib-fabric-1.20.1-4.8.3.jar
+26/02/2026  09:20           569.221 integrated_api-1.5.3+1.20.1-fabric.jar
+26/02/2026  09:20         5.119.463 integrated_stronghold-1.1.1+1.20.1-fabric.jar
+26/02/2026  10:32         4.567.047 integrated_villages-1.3.0+1.20.1-fabric.jar
+26/02/2026  09:29            49.238 lootintegrations-fabric-1.20.1-4.7.jar
+26/02/2026  09:29             7.173 lootintegrations_dnt-2.4.jar
+26/02/2026  09:40        18.855.810 midnightlurker-1.20.1-1.0.2.jar
+26/02/2026  09:20         1.364.979 moonlight-1.20-2.16.28-fabric.jar
+26/02/2026  09:22           399.214 Nullscape_1.20.x_v1.2.8.jar
+26/02/2026  10:29           857.105 Patchouli-1.20.1-84.1-FABRIC.jar
+26/02/2026  10:29           555.041 Pehkui-3.8.3+1.14.4-1.21.jar
+25/02/2026  20:44           135.078 resourcefulconfig-fabric-1.20.1-2.1.3.jar
+26/02/2026  09:29           431.646 resourcefullib-fabric-1.20.1-2.1.29.jar
+25/02/2026  21:04            63.961 structureessentials-fabric-1.20.1-4.8.jar
+26/02/2026  09:20        13.484.325 supplementaries-1.20-3.1.42-fabric.jar
+26/02/2026  10:30        10.272.185 The_Graveyard_3.1_(FABRIC)_for_1.20.1.jar
+26/02/2026  10:29           238.532 trinkets-3.7.2.jar
+26/02/2026  09:37         5.525.883 tru.e-ending-v1.1.0c.jar
+27/02/2026  22:56           535.315 waystones-fabric-1.20.1-14.1.20.jar
+26/02/2026  09:37         1.396.331 YungsApi-1.20-Fabric-4.0.6.jar
+26/02/2026  09:37           517.369 YungsBetterEndIsland-1.20-Fabric-2.0.6.jar
+              45 archivos    266.938.925 bytes
+               2 dirs  71.179.051.008 bytes libres

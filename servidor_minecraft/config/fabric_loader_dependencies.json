@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "overrides": {
+    "flywheel": {
+      "-breaks": {
+        "embeddium": "IGNORED"
+      }
+    }
+  }
+}

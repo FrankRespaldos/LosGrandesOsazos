@@ -1,0 +1,80 @@
+[
+  {
+    "user": {
+      "type": "player",
+      "name": "Artxhyriux",
+      "uniqueId": "0004c617-56e6-4686-5724-6656e6978000"
+    },
+    "time": 1772894562029,
+    "type": "Profiler",
+    "data": {
+      "type": "url",
+      "value": "https://spark.lucko.me/o8dJToHn6C"
+    }
+  },
+  {
+    "user": {
+      "type": "player",
+      "name": "Artxhyriux",
+      "uniqueId": "0004c617-56e6-4686-5724-6656e6978000"
+    },
+    "time": 1772749710704,
+    "type": "Profiler",
+    "data": {
+      "type": "url",
+      "value": "https://spark.lucko.me/xiGsCYsseU"
+    }
+  },
+  {
+    "user": {
+      "type": "player",
+      "name": "Artxhyriux",
+      "uniqueId": "0004c617-56e6-4686-5724-6656e6978000"
+    },
+    "time": 1772745398465,
+    "type": "Profiler",
+    "data": {
+      "type": "url",
+      "value": "https://spark.lucko.me/EaSKxv2JR9"
+    }
+  },
+  {
+    "user": {
+      "type": "player",
+      "name": "Artxhyriux",
+      "uniqueId": "0004c617-56e6-4686-5724-6656e6978000"
+    },
+    "time": 1772629960730,
+    "type": "Profiler",
+    "data": {
+      "type": "url",
+      "value": "https://spark.lucko.me/VUBkNkWlko"
+    }
+  },
+  {
+    "user": {
+      "type": "player",
+      "name": "Artxhyriux",
+      "uniqueId": "0004c617-56e6-4686-5724-6656e6978000"
+    },
+    "time": 1772629020254,
+    "type": "Profiler",
+    "data": {
+      "type": "url",
+      "value": "https://spark.lucko.me/eERQIcviC5"
+    }
+  },
+  {
+    "user": {
+      "type": "player",
+      "name": "Artxhyriux",
+      "uniqueId": "0004c617-56e6-4686-5724-6656e6978000"
+    },
+    "time": 1772595024595,
+    "type": "Profiler",
+    "data": {
+      "type": "url",
+      "value": "https://spark.lucko.me/HTBB7W13qH"
+    }
+  }
+]

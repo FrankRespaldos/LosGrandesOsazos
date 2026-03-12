@@ -1,0 +1,18 @@
+{
+  "chunkSaveDelay": {
+    "desc:": "Delay before a chunk is saved to disk, default: 300 seconds",
+    "chunkSaveDelay": 180
+  },
+  "chunkUnloadLimit": {
+    "desc:": "Maximum amount of chunks unloaded per tick, default: 20, vanilla:200",
+    "chunkUnloadLimit": 25
+  },
+  "disableProtoSave": {
+    "desc:": "Disables saving of protochunks to reduce saving lag. Default: true",
+    "disableProtoSave": true
+  },
+  "debugLogging": {
+    "desc:": "Enables debug logging. default: false",
+    "debugLogging": false
+  }
+}
